@@ -1,7 +1,7 @@
 Generative Algorithms
 =====================
 
-A simple simulator that uses the concept of evolution for biology to solve problems.
+A simple tool that uses the concept of evolution from biology to solve problems.
 
 I wrote this code while reading the book [The Selfish Gene](http://en.wikipedia.org/wiki/The_Selfish_Gene) by Richard Dawkins.
 
