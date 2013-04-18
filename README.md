@@ -5,11 +5,10 @@ A simple simulator that uses the concept of evolution to solve problems
 
  1. Enter a 'secret key'
  2. Generate a random string (parent)
- 3. Generate 1000 strings based on the parents (with minor mutations)
- 4. Select the child that is closest to the 'secret key'
- 5. This child becomes the new parent
- 6. Go back to step three until the key is found
-
+ 3. Generate 1000 strings based on the parent (with minor mutations)
+ 4. Select the child that is closest to the 'secret key' (lowest 'Deltasum')
+ 5. This child becomes the parent for the next generation
+ 6. Go back to step 3 until the secret key is found
 
 
 Program flow:
