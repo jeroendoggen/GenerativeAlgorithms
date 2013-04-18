@@ -1,8 +1,12 @@
-GenerativeAlgorithms
-====================
+Generative Algorithms
+=====================
 
-A simple simulator that uses the concept of evolution to solve problems
+A simple simulator that uses the concept of evolution for biology to solve problems.
 
+I wrote this code while reading the book [The Selfish Gene](http://en.wikipedia.org/wiki/The_Selfish_Gene) by Richard Dawkins.
+
+Program flow:
+-------------
  1. Enter a 'secret key'
  2. Generate a random string (parent)
  3. Generate 1000 strings based on the parent (with minor mutations)
@@ -11,8 +15,8 @@ A simple simulator that uses the concept of evolution to solve problems
  6. Go back to step 3 until the secret key is found
 
 
-Program flow:
--------------
+Example output:
+---------------
 
     $ ./dawkins
     Enter secret key: (followed by enter) (maximum key length:8)
