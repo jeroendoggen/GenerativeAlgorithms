@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Generative Algorithms : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Generative Algorithms</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jeroendoggen/GenerativeAlgorithms">View on GitHub</a>
+
+          <h1 id="project_title">Generative Algorithms</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jeroendoggen/GenerativeAlgorithms/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jeroendoggen/GenerativeAlgorithms/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="generative-algorithms" class="anchor" href="#generative-algorithms"><span class="octicon octicon-link"></span></a>Generative Algorithms</h1>
+
+<p>A simple tool that uses the concept of evolution from biology to solve problems.</p>
+
+<p>I wrote this code while reading the book <a href="http://en.wikipedia.org/wiki/The_Selfish_Gene">The Selfish Gene</a> by Richard Dawkins. Somewhere in that book, the author ask the reader to write their own simulator and I was crazy enough to actually do that…</p>
+
+<h2>
+<a name="program-flow" class="anchor" href="#program-flow"><span class="octicon octicon-link"></span></a>Program flow:</h2>
+
+<ol>
+<li>Enter a 'secret key'</li>
+<li>Generate a random string (parent)</li>
+<li>Generate 1000 strings based on the parent (with minor mutations)</li>
+<li>Select the child that is closest to the 'secret key' (lowest 'Deltasum')</li>
+<li>This child becomes the parent for the next generation</li>
+<li>Go back to step 3 until the secret key is found</li>
+</ol><h2>
+<a name="example-output" class="anchor" href="#example-output"><span class="octicon octicon-link"></span></a>Example output:</h2>
+
+<pre><code>$ ./dawkins
+Enter secret key: (followed by enter) (maximum key length:8)
+mysecret
+Secret: m y s e c r e t Checksum secret:876
+
+Bestdelta: 9999999 Generation: 1 Deltasum: 554 Parent: � � � �   B  
+Bestdelta: 554 Generation: 1 Deltasum: 454 Parent: � � � � v ? B  
+Bestdelta: 454 Generation: 1 Deltasum: 434 Parent: y � � � �  B  
+Bestdelta: 434 Generation: 1 Deltasum: 432 Parent: G � � � T  B : 
+Bestdelta: 432 Generation: 1 Deltasum: 397 Parent: 2 � � � T � B � 
+Bestdelta: 397 Generation: 1 Deltasum: 386 Parent: � @ � � � B : � 
+Bestdelta: 386 Generation: 1 Deltasum: 371 Parent: � r � � T � B
+....
+1000 failed generations, resetting parent:  n x s e c m f u
+Bestdelta: 10 Generation: 3040 Deltasum: 9 Parent: m w s e c m f u 
+Bestdelta: 9 Generation: 3040 Deltasum: 8 Parent: n x s e c n f u 
+Bestdelta: 8 Generation: 3040 Deltasum: 7 Parent: n y s f c n f t 
+Bestdelta: 7 Generation: 3040 Deltasum: 6 Parent: m x s e c m e t 
+...
+1000 failed generations, resetting parent:  m y s e c t e u
+Bestdelta: 7 Generation: 13074 Deltasum: 3 Parent: m y s e c t e u 
+Bestdelta: 3 Generation: 13074 Deltasum: 2 Parent: m y s e c t e t 
+Bestdelta: 2 Generation: 13074 Deltasum: 1 Parent: m y s e c s e t 
+Bestdelta: 1 Generation: 13075 Deltasum: 0 Parent: m y s e c r e t
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Generative Algorithms maintained by <a href="https://github.com/jeroendoggen">jeroendoggen</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-41353154-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
